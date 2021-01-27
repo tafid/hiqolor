@@ -1,19 +1,27 @@
-import './App.css'
+import "bootstrap/dist/css/bootstrap.css";
+import "github-fork-ribbon-css/gh-fork-ribbon.css";
+import "./App.css";
+import "./colors.css";
 
-import React, {Component} from 'react'
+import React from "react";
+import SyntaxDemo from "./components/SyntaxDemo";
+import SelectScheme from "./components/SelectScheme";
+import Form from "./components/Form";
 
-class App extends Component {
-  render() {
-    return <div className="App">
-      <div className="App-heading App-flex">
-        <h2>Welcome to <span className="App-react">React</span></h2>
-      </div>
-      <div className="App-instructions App-flex">
-        <img className="App-logo" src={require('./react.svg')}/>
-        <p>Edit <code>src/App.js</code> and save to hot reload your changes.</p>
+const App = () => {
+  return (
+    <div className={"container"}>
+      <div className="row py-5">
+        <div className="col-sm-6">
+          <SyntaxDemo/>
+        </div>
+        <div className="col-sm-6">
+          <SelectScheme/>
+          <Form/>
+        </div>
       </div>
     </div>
-  }
-}
+  );
+};
 
-export default App
+export default App;
